@@ -1,0 +1,31 @@
+Array Deduping
+-- Write an algorithm that removes duplicates from an array.
+-- First time solve without using filter().
+-- Second time solve with filter().
+
+Loop through the given array
+
+Array should have at least one element that is repeated
+.push each unique element into the new array
+if element already exists in the new array, do not .push
+return the new array
+
+let dedupe = [7, 9, "hi", 12, "hi", 7, 53];
+let result = [];
+dedupe.forEach((element) => {
+  if (!result.includes(element)) {
+    return result.push(element);
+  }
+})
+
+Using .filter:
+
+Same initial array
+.filter will look at each element and each index.
+we will only return the first indexed instance of each element.
+
+
+let filterDupe = [7, 9, "hi", 12, "hi", 7, 53];
+let result2 = filterDupe.filter((element, index) => {
+  return filterDupe.indexOf(element) === index;
+});

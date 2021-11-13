@@ -1,0 +1,27 @@
+Remove duplicates from an array
+do not use filter at first
+create an alternative using filter
+create an alternative using recursion
+[7, 9, "hi", 12, "hi", 7, 53]
+[7, 9, "hi", 12, 53]
+array must be exact ("hi" !== "HI")
+
+
+Loop through the array
+look for unique instances in the array .includes
+.push into a new array
+
+let notDuped = [7, 9, "hi", 12, "hi", 7, 53];
+let result = [];
+notDuped.forEach((element) => {
+  if (!result.includes(element)) {
+  return result.push(element);
+  }
+});
+
+
+let result2 = notDuped.filter((element, ));
+return result2 
+
+
+

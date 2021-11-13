@@ -1,0 +1,24 @@
+Turning Strings to URLs
+-- receive input with spaces (Jasmine Ann Jones)
+-- replace spaces with "%20"
+-- Cannot use replace() or regular expressions
+
+Create a function called url that takes a string as an argument
+.split string at each space and .join with %20
+return the string
+
+function url(str) {
+  return str.split(" ").join("%20");
+}
+
+Recursive:
+
+const recurl = (str) => {
+  if (!str.includes(" ")) {
+    return "There are no spaces";
+  } else {
+    return str.split(" ").join("%20");
+  }
+}
+
+This function works, but it is not actually recursive /sadface

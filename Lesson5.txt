@@ -1,0 +1,23 @@
+Array Sorting
+-- Sort an array without using sort()
+
+
+Input: [9, 2, 7, 12]
+Output: [2, 7, 9, 12]
+
+
+function bubble(array) {
+  let sort = false;
+  while (!sort) {
+    sort = true;
+    for (let i = 1; i < array.length; i += 1) {
+      if (array[i - 1] > array[i]) {
+        sort = false;
+        let sorting = array[i - 1];
+        array[i - 1] = array[i];
+        array[i] = sorting;
+      }
+    }
+  }
+  return array;
+}

@@ -1,0 +1,32 @@
+Compressing Strings
+-- Take a string with repeated characters and compress them
+-- use a number to show how many times it was repeated.
+-- example:  aaa should be returned as 3a.
+
+input: "aaabccdddda"
+output: "3ab2c4da"
+
+Output indicates we are ONLY adding repeats, meaning once a character stops repeating we do not add subsequent re-occurances
+
+
+function stringCompression (str) {
+  let output = '';
+  let count = 0;
+  for (let i = 0; i < str.length; i++) {
+    count++;
+    if (str[i] != str[i + 1]) {
+      output += count + str[i];
+      count = 0;
+    }
+  }
+  return output;
+}
+
+stringCompression("aaabccdddda")
+
+if (count > 1) {
+  output += count + str[i];
+  count = 0;
+} else {
+  output += str[i];
+}

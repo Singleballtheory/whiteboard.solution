@@ -1,0 +1,35 @@
+Checking for Uniqueness
+-- Determine whether all elements in a string are unique
+-- cannot convert string into an array or use array methods
+-- should return a boolean (true/false)
+
+example: "Hello"
+false
+"copyright"
+true
+
+Write a function that takes a string
+Create an empty string result
+run a for loop through the string
+use .includes to see if a value within the string has already been indexed
+If it has not, += the result with that string value
+Loop should complete having removed any duplicates
+Compare result with the original string
+if they are equal, return true
+if they are not equal, it means at least one value has been omitted because it was repeated; return false
+
+
+
+function noRepeat(str) {
+  let result = "";
+  for(let i = 0; i < str.length; i++) {
+    if(result.includes(str[i]) !== true) {
+      result += str[i]
+    }
+  }
+  if (result === str) {
+    return "true";
+  } else {
+    return "false";
+  }
+}
